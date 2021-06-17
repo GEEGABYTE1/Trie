@@ -1,2 +1,3 @@
-# Trie
-Trie Data Structure Re-creation 
+# Trie 🌴
+
+Trie Data Structure Re-creation within Python 
