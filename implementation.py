@@ -12,6 +12,7 @@ class Trie:
         letters_in_tree = []
 
         for word in lst:
+            word = word.lower()
             self.tree = head_node
             counter = 0
             for letter in word:
@@ -52,10 +53,37 @@ class Trie:
                     self.tree = self.tree.children[0]
                 
                 counter += 1
+        
+        self.tree = head_node
 
 
     def traverse(self):
-        user_prompt == input("Please enter a word you are trying to find in a trie: ")
+        user_prompt = input("Please enter a word you are trying to find in a trie: ")
+        tree = self.tree
+
+        user_prompt = user_prompt.lower()
+        user_letters = [i for i in user_prompt]
+
+        returned_path = []
+
+        nodes = [self.tree]
+        while len(nodes) > 0 and len(user_letters) > 0:
+            current_node = nodes.pop()
+            if current_node.value == user_letters[0]:
+                returned_path.append(current_node)
+                user_letters.pop(0)
+            nodes += current_node.children
+        
+        if len(returned_path) == len(user_prompt):
+            return True 
+        else:
+            return False
+        
+        
+            
+
+
+
         
 
 
@@ -71,4 +99,6 @@ class Trie:
 test = Trie()
 
 test.implementation(lst)
+print(test.traverse())
+
 
