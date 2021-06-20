@@ -17,13 +17,13 @@ The Trie will add nodes to it's parent nodes as children in 3 cases:
  
 If the letter is similar to the current node value and is not right after the current node in the very word, the trie will skip the addition of the new node and move on. When the trie adds a new node, that new node becomes the current node and compares it to the new letter. If they are the same, the pattern repeats until we have completely added the word to the trie. 
 
-Since we are adding each letter of  each word in a list, the time complexity of the `.implementation()` function is `O(N^2)`
+Since we are adding each letter of  each word in a list, the time complexity of the `.implementation()` function is `O(an)` as it depends on the length of the list, and the length of the word itself as well.
 
 # Search 🔎
 
 The `.traverse()` function is very similar to the function that adds the nodes to the trie itself. The Trie will look at each child node of the corresponding parent. If one of the parent node's child matches with the current letter, it will add it to a "saved_path", and will make that child the current_node. This pattern will keep going until it reaches the leaf node. When the function is done traversing, it will compare the node values of the path to the actual word itself. If they are the same, it will return `True` or `False` otherwise.
 
-The `.traverse()` function only compares each letter of the prompted word with the current_path, hence, giving at an `O(N)` time complexity. 
+The `.traverse()` function only compares each letter of the prompted word with the current_path, hence, giving at an `O(an)` time complexity as it depends on the length of the word and the number of total words. 
 
 # More Information 📚
 
