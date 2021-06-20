@@ -4,7 +4,7 @@ Trie Data Structure Re-creation within Python.
 
 Trie is essentially a data structure that has letters of each word as a node of a tree. We can search if a word is present in the tree by traversing letter by letter down the tree. If the path of the traverse is the same as the letters in the word, the word has been found, otherwise; it is not in the tree. 
 
-This is data structure can be used to autocomplete text, text_search, prefix_matching, and much more. When it comes to working with strings, the trie data structure  is very effective and efficient ✅
+This is data structure can be used to autocomplete text, text search, prefix matching, and much more. When it comes to working with strings, the trie data structure  is very effective and efficient ✅
 
 # Implementation 📲
 
