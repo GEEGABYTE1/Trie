@@ -74,7 +74,10 @@ class Trie:
                 user_letters.pop(0)
             nodes += current_node.children
         
-        if len(returned_path) == len(user_prompt):
+
+        returned_path = [i.value for i in returned_path]
+        user_letters  = [i for i in user_prompt]
+        if returned_path == user_letters:
             return True 
         else:
             return False
